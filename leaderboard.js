@@ -103,7 +103,7 @@ if (Meteor.isServer) {
       check(id, Number);
       check(amount, Number);
 
-      liveDb.db.query(
+      liveDb.query(
         'UPDATE players SET score = score + ? WHERE id = ?', [ amount, id ]);
     }
   });
